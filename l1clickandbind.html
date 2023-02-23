@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Click and Bind</title>
+    </head>
+    <head>
+
+        <h1>Welcome to jQuery</h1>
+        <h4>Are you ready to learn jQuery of js libary</h4>
+        <button type="button" id="click" class="click">Click Me</button>
+        <button type="button" id="singleclk" class="singleclk">Single Click</button>
+        <button type="button" id="dbclick" class="dbclick">Double Click</button>
+
+
+        <!-- jQuery -->
+        <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                $("#click").click('click',function(){
+                    console.log('I am working by click');
+                });
+
+                $('.singleclk').bind('click',function(){
+                    console.log('I am Single Click By Bind');
+                });
+
+                $('.dbclick').bind('dblclick',function(){
+                    console.log('I am Double Click by Bind');
+                });
+            });
+        </script>
+    </head>
+</html>
